@@ -1,0 +1,56 @@
+# Test against this version of Node.js
+environment:
+  matrix:
+  - nodejs_version: "10"
+  - nodejs_version: "8"
+  - nodejs_version: "6"
+  - nodejs_version: "4"
+
+matrix:
+  fast_finish: true
+  allow_failures:
+    - nodejs_version: "4" # for eslint 5
+
+# platform:
+#   - x86
+#   - x64
+
+# Install scripts. (runs after repo cloning)
+install:
+  # Get the latest stable version of Node.js or io.js
+  - ps: Install-Product node $env:nodejs_version
+
+  # install modules
+  - ps: >-
+      if ($env:nodejs_version -eq "4") {
+        npm install -g npm@3;
+      }
+  - npm install
+
+  # fix symlinks
+  - cmd: git config core.symlinks true
+  - cmd: git reset --hard
+
+  # todo: learn how to do this for all .\resolvers\* on Windows
+  - cd .\resolvers\webpack && npm install && cd ..\..
+  - cd .\resolvers\node && npm install && cd ..\..
+
+# Post-install test scripts.
+test_script:
+
+  # Output useful info for debugging.
+  - node --version
+  - npm --version
+
+  # core tests
+  - npm test
+
+  # resolver tests
+  - cd .\resolvers\webpack && npm test && cd ..\..
+  - cd .\resolvers\node && npm test && cd ..\..
+
+on_success:
+  - npm run coveralls
+
+# Don't actually build.
+build: off

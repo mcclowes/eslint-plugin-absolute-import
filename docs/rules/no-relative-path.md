@@ -1,4 +1,4 @@
-# import/no-absolute-path: Forbid import of modules using absolute paths
+# import/no-relative-path: Forbid import of modules using absolute paths
 
 Node.js allows the import of modules using an absolute path such as `/home/xyz/file.js`. That is a bad practice as it ties the code using it to your computer, and therefore makes it unusable in packages distributed on `npm` for instance.
 
@@ -40,7 +40,7 @@ If `{ amd: true }` is provided, dependency paths for AMD-style `define` and `req
 calls will be resolved:
 
 ```js
-/*eslint import/no-absolute-path: [2, { commonjs: false, amd: true }]*/
+/*eslint import/no-relative-path: [2, { commonjs: false, amd: true }]*/
 define(['/foo'], function (foo) { /*...*/ }) // reported
 require(['/foo'], function (foo) { /*...*/ }) // reported
 

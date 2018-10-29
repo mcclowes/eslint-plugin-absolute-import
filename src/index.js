@@ -1,5 +1,5 @@
 export const rules = {
-  'absolute-path': require('./rules/absolute-path'),
+  'no-relative-path': require('./rules/no-relative-path'),
 }
 
 export const configs = {

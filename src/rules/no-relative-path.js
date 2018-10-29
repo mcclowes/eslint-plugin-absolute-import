@@ -5,14 +5,13 @@ import docsUrl from '../docsUrl'
 module.exports = {
   meta: {
     docs: {
-      url: docsUrl('absolute-path'),
+      url: docsUrl('no-relative-path'),
     },
     schema: [ makeOptionsSchema() ],
   },
 
   create: function (context) {
     function reportIfNotAbsolute(source) {
-      console.log('> ', source.value, isAbsolute(source.value))
       if (!isAbsolute(source.value)) {
         context.report(source, 'Import modules using an absolute path')
       }

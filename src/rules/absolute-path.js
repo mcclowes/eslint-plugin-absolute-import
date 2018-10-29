@@ -12,6 +12,7 @@ module.exports = {
 
   create: function (context) {
     function reportIfNotAbsolute(source) {
+      console.log('> ', source.value, isAbsolute(source.value))
       if (!isAbsolute(source.value)) {
         context.report(source, 'Import modules using an absolute path')
       }

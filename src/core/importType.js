@@ -18,7 +18,7 @@ function baseModule(name) {
 }
 
 export function isAbsolute(name) {
-  return name.indexOf('/') === 0
+  return name[0] === '/' || name[0] !== '.'
 }
 
 export function isBuiltIn(name, settings) {

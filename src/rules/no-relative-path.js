@@ -7,6 +7,7 @@ module.exports = {
   meta: {
     docs: {
       url: docsUrl('no-relative-path'),
+      url: docsUrl('no-unresolved'),
     },
     schema: [ makeOptionsSchema() ],
   },

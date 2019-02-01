@@ -1,5 +1,6 @@
 export const rules = {
   'no-relative-path': require('./rules/no-relative-path'),
+  'no-unresolved': require('./rules/no-unresolved'),
 }
 
 export const configs = {

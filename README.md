@@ -13,6 +13,7 @@ This plugin intends to support linting of ES2015+ (ES6+) import/export syntax, a
 ### Static analysis
 
 * Forbid import of modules using relative paths ([`no-relative-path`])
+* Forbid unresolved imports ([`no-unresolved`])
 
 [`no-absolute-path`]: ./docs/rules/no-absolute-path.md
 

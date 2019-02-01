@@ -8,6 +8,7 @@ module.exports = {
   rules: {
     // analysis/correctness
     'import/no-relative-path': 'error',
+    'import/no-unresolved': 'error',
   },
 
   // need all these for parsing dependencies (even if _your_ code doesn't need

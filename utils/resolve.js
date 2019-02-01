@@ -61,6 +61,14 @@ function relative(modulePath, sourceFile, settings) {
   return fullResolve(modulePath, sourceFile, settings).path
 }
 
+function absolute(parserPath, modulePath, sourceFile, settings) {
+  //console.log('1 >>> ', parserPath, modulePath, sourceFile, settings)
+  const rootDir = parserPath.split('/node_modules/')
+  const prePath = rootDir[0] + '/' + modulePath
+  //console.log('2 >>> ', rootDir[0], prePath)
+  return fullResolve(prePath, sourceFile, settings).path
+}
+
 function fullResolve(modulePath, sourceFile, settings) {
   // check if this is a bonus core module
   const coreSet = new Set(settings['import/core-modules'])
@@ -126,7 +134,7 @@ function fullResolve(modulePath, sourceFile, settings) {
   // cache(undefined)
   return { found: false }
 }
-exports.relative = relative
+exports.absolute = absolute
 
 function resolverReducer(resolvers, map) {
   if (resolvers instanceof Array) {
@@ -188,10 +196,26 @@ const erroredContexts = new Set()
  */
 function resolve(p, context) {
   try {
-    return relative( p
-                   , context.getFilename()
-                   , context.settings
-                   )
+    let resolvedPath = relative( 
+      p, 
+      context.getFilename(),
+      context.settings
+    )
+
+    // if(resolvedPath===undefined){
+    //   console.log('error', p, context)
+    // }
+
+    if(resolvedPath===undefined){
+      resolvedPath = absolute(
+        context.parserPath,
+        p, 
+        context.getFilename(),
+        context.settings
+      )
+    }
+
+    return resolvedPath
   } catch (err) {
     if (!erroredContexts.has(context)) {
       context.report({
@@ -203,4 +227,5 @@ function resolve(p, context) {
   }
 }
 resolve.relative = relative
+resolve.absolute = absolute
 exports.default = resolve

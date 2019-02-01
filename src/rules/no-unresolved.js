@@ -1,11 +1,12 @@
 /**
  * @fileOverview Ensures that an imported path exists, given resolution rules.
- * @author Ben Mosher
+ * @author mcclowes
  */
 
 import resolve, { CASE_SENSITIVE_FS, fileExistsWithCaseSync } from 'eslint-module-utils/resolve'
-import ModuleCache from 'eslint-module-utils/ModuleCache'
 import moduleVisitor, { makeOptionsSchema } from 'eslint-module-utils/moduleVisitor'
+
+import ModuleCache from 'eslint-module-utils/ModuleCache'
 import docsUrl from '../docsUrl'
 
 module.exports = {
@@ -21,7 +22,6 @@ module.exports = {
   },
 
   create: function (context) {
-
     function checkSourceValue(source) {
       const shouldCheckCase = !CASE_SENSITIVE_FS &&
         (!context.options[0] || context.options[0].caseSensitive !== false)

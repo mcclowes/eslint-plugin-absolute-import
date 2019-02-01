@@ -3,7 +3,8 @@
  * @author mcclowes
  */
 
-import resolve, { CASE_SENSITIVE_FS, fileExistsWithCaseSync } from 'eslint-module-utils/resolve'
+import { CASE_SENSITIVE_FS, fileExistsWithCaseSync } from 'eslint-module-utils/resolve'
+import resolve from '../../utils/resolve'
 import moduleVisitor, { makeOptionsSchema } from 'eslint-module-utils/moduleVisitor'
 
 import ModuleCache from 'eslint-module-utils/ModuleCache'

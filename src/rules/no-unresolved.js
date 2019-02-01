@@ -3,8 +3,8 @@
  * @author mcclowes
  */
 
-import { CASE_SENSITIVE_FS, fileExistsWithCaseSync } from 'eslint-module-utils/resolve'
-import resolve from '../../utils/resolve'
+import resolve, { CASE_SENSITIVE_FS, fileExistsWithCaseSync } from 'eslint-module-utils/resolve'
+import resolveAbsolute from '../resolveAbsolute'
 import moduleVisitor, { makeOptionsSchema } from 'eslint-module-utils/moduleVisitor'
 
 import ModuleCache from 'eslint-module-utils/ModuleCache'
@@ -27,7 +27,11 @@ module.exports = {
       const shouldCheckCase = !CASE_SENSITIVE_FS &&
         (!context.options[0] || context.options[0].caseSensitive !== false)
 
-      const resolvedPath = resolve(source.value, context)
+      let resolvedPath = resolve(source.value, context)
+
+      if (resolvedPath === undefined) {
+        resolvedPath = resolveAbsolute(source.value, context)
+      }
 
       if (resolvedPath === undefined) {
         context.report(source,

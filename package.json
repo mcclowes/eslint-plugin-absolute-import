@@ -57,7 +57,6 @@
     "eslint-import-resolver-typescript": "1.0.2",
     "eslint-import-resolver-webpack": "file:./resolvers/webpack",
     "eslint-module-utils": "file:./utils",
-    "eslint-plugin-absolute-import": "2.x",
     "gulp": "^3.9.0",
     "gulp-babel": "6.1.2",
     "linklocal": "^2.6.0",

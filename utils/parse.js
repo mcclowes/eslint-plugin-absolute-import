@@ -4,7 +4,7 @@ exports.__esModule = true
 const moduleRequire = require('./module-require').default
 const extname = require('path').extname
 
-const log = require('debug')('eslint-plugin-import:parse')
+const log = require('debug')('eslint-plugin-absolute-import:parse')
 
 exports.default = function parse(path, content, context) {
 

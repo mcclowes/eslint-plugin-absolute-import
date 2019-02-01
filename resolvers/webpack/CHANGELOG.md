@@ -81,7 +81,7 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 
 ## 0.3.1 - 2016-06-02
 ### Added
-- debug logging. run with `DEBUG=eslint-plugin-import:*` to see log output.
+- debug logging. run with `DEBUG=eslint-plugin-absolute-import:*` to see log output.
 
 ## 0.3.0 - 2016-06-01
 ### Changed
@@ -106,33 +106,33 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 - `interpret` configs (such as `.babel.js`).
   Thanks to [@gausie] for the initial PR ([#164], ages ago! 😅) and [@jquense] for tests ([#278]).
 
-[#1220]: https://github.com/benmosher/eslint-plugin-import/pull/1220
-[#1091]: https://github.com/benmosher/eslint-plugin-import/pull/1091
-[#969]: https://github.com/benmosher/eslint-plugin-import/pull/969
-[#968]: https://github.com/benmosher/eslint-plugin-import/pull/968
-[#768]: https://github.com/benmosher/eslint-plugin-import/pull/768
-[#683]: https://github.com/benmosher/eslint-plugin-import/pull/683
-[#572]: https://github.com/benmosher/eslint-plugin-import/pull/572
-[#569]: https://github.com/benmosher/eslint-plugin-import/pull/569
-[#533]: https://github.com/benmosher/eslint-plugin-import/pull/533
-[#413]: https://github.com/benmosher/eslint-plugin-import/pull/413
-[#377]: https://github.com/benmosher/eslint-plugin-import/pull/377
-[#363]: https://github.com/benmosher/eslint-plugin-import/pull/363
-[#289]: https://github.com/benmosher/eslint-plugin-import/pull/289
-[#287]: https://github.com/benmosher/eslint-plugin-import/pull/287
-[#278]: https://github.com/benmosher/eslint-plugin-import/pull/278
-[#181]: https://github.com/benmosher/eslint-plugin-import/pull/181
-[#164]: https://github.com/benmosher/eslint-plugin-import/pull/164
+[#1220]: https://github.com/mcclowes/eslint-plugin-absolute-import/pull/1220
+[#1091]: https://github.com/mcclowes/eslint-plugin-absolute-import/pull/1091
+[#969]: https://github.com/mcclowes/eslint-plugin-absolute-import/pull/969
+[#968]: https://github.com/mcclowes/eslint-plugin-absolute-import/pull/968
+[#768]: https://github.com/mcclowes/eslint-plugin-absolute-import/pull/768
+[#683]: https://github.com/mcclowes/eslint-plugin-absolute-import/pull/683
+[#572]: https://github.com/mcclowes/eslint-plugin-absolute-import/pull/572
+[#569]: https://github.com/mcclowes/eslint-plugin-absolute-import/pull/569
+[#533]: https://github.com/mcclowes/eslint-plugin-absolute-import/pull/533
+[#413]: https://github.com/mcclowes/eslint-plugin-absolute-import/pull/413
+[#377]: https://github.com/mcclowes/eslint-plugin-absolute-import/pull/377
+[#363]: https://github.com/mcclowes/eslint-plugin-absolute-import/pull/363
+[#289]: https://github.com/mcclowes/eslint-plugin-absolute-import/pull/289
+[#287]: https://github.com/mcclowes/eslint-plugin-absolute-import/pull/287
+[#278]: https://github.com/mcclowes/eslint-plugin-absolute-import/pull/278
+[#181]: https://github.com/mcclowes/eslint-plugin-absolute-import/pull/181
+[#164]: https://github.com/mcclowes/eslint-plugin-absolute-import/pull/164
 
-[#1219]: https://github.com/benmosher/eslint-plugin-import/issues/1219
-[#788]: https://github.com/benmosher/eslint-plugin-import/issues/788
-[#767]: https://github.com/benmosher/eslint-plugin-import/issues/767
-[#681]: https://github.com/benmosher/eslint-plugin-import/issues/681
-[#435]: https://github.com/benmosher/eslint-plugin-import/issues/435
-[#411]: https://github.com/benmosher/eslint-plugin-import/issues/411
-[#357]: https://github.com/benmosher/eslint-plugin-import/issues/357
-[#286]: https://github.com/benmosher/eslint-plugin-import/issues/286
-[#283]: https://github.com/benmosher/eslint-plugin-import/issues/283
+[#1219]: https://github.com/mcclowes/eslint-plugin-absolute-import/issues/1219
+[#788]: https://github.com/mcclowes/eslint-plugin-absolute-import/issues/788
+[#767]: https://github.com/mcclowes/eslint-plugin-absolute-import/issues/767
+[#681]: https://github.com/mcclowes/eslint-plugin-absolute-import/issues/681
+[#435]: https://github.com/mcclowes/eslint-plugin-absolute-import/issues/435
+[#411]: https://github.com/mcclowes/eslint-plugin-absolute-import/issues/411
+[#357]: https://github.com/mcclowes/eslint-plugin-absolute-import/issues/357
+[#286]: https://github.com/mcclowes/eslint-plugin-absolute-import/issues/286
+[#283]: https://github.com/mcclowes/eslint-plugin-absolute-import/issues/283
 
 [@gausie]: https://github.com/gausie
 [@jquense]: https://github.com/jquense

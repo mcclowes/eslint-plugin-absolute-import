@@ -1,7 +1,7 @@
 {
   "name": "eslint-import-resolver-webpack",
   "version": "0.10.1",
-  "description": "Resolve paths to dependencies, given a webpack.config.js. Plugin for eslint-plugin-import.",
+  "description": "Resolve paths to dependencies, given a webpack.config.js. Plugin for eslint-plugin-absolute-import.",
   "main": "index.js",
   "scripts": {
     "test": "nyc mocha -t 5s",
@@ -14,21 +14,21 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/benmosher/eslint-plugin-import.git"
+    "url": "git+https://github.com/mcclowes/eslint-plugin-absolute-import.git"
   },
   "keywords": [
-    "eslint-plugin-import",
+    "eslint-plugin-absolute-import",
     "eslint",
     "jsnext",
     "modules",
     "webpack"
   ],
-  "author": "Ben Mosher (me@benmosher.com)",
+  "author": "Ben Mosher (me@mcclowes.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/benmosher/eslint-plugin-import/issues"
+    "url": "https://github.com/mcclowes/eslint-plugin-absolute-import/issues"
   },
-  "homepage": "https://github.com/benmosher/eslint-plugin-import/tree/master/resolvers/webpack",
+  "homepage": "https://github.com/mcclowes/eslint-plugin-absolute-import/tree/master/resolvers/webpack",
   "dependencies": {
     "array-find": "^1.0.0",
     "debug": "^2.6.8",
@@ -42,7 +42,7 @@
     "semver": "^5.3.0"
   },
   "peerDependencies": {
-    "eslint-plugin-import": ">=1.4.0",
+    "eslint-plugin-absolute-import": ">=1.4.0",
     "webpack": ">=1.11.0"
   },
   "devDependencies": {

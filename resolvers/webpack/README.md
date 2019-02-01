@@ -2,12 +2,12 @@
 
 [![npm](https://img.shields.io/npm/v/eslint-import-resolver-webpack.svg)](https://www.npmjs.com/package/eslint-import-resolver-webpack)
 
-Webpack-literate module resolution plugin for [`eslint-plugin-import`](https://www.npmjs.com/package/eslint-plugin-import).
+Webpack-literate module resolution plugin for [`eslint-plugin-absolute-import`](https://www.npmjs.com/package/eslint-plugin-absolute-import).
 
 Published separately to allow pegging to a specific version in case of breaking
 changes.
 
-To use with `eslint-plugin-import`, run:
+To use with `eslint-plugin-absolute-import`, run:
 
 ```
 npm i eslint-import-resolver-webpack -g

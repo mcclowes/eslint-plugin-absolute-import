@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/eslint-import-resolver-node.svg)](https://www.npmjs.com/package/eslint-import-resolver-node)
 
-Default Node-style module resolution plugin for [`eslint-plugin-import`](https://www.npmjs.com/package/eslint-plugin-import).
+Default Node-style module resolution plugin for [`eslint-plugin-absolute-import`](https://www.npmjs.com/package/eslint-plugin-absolute-import).
 
 Published separately to allow pegging to a specific version in case of breaking
 changes.

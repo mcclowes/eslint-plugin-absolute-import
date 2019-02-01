@@ -1,7 +1,7 @@
 {
   "name": "eslint-import-resolver-node",
   "version": "0.3.2",
-  "description": "Node default behavior import resolution plugin for eslint-plugin-import.",
+  "description": "Node default behavior import resolution plugin for eslint-plugin-absolute-import.",
   "main": "index.js",
   "files": [
     "index.js"
@@ -12,21 +12,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/benmosher/eslint-plugin-import"
+    "url": "https://github.com/mcclowes/eslint-plugin-absolute-import"
   },
   "keywords": [
     "eslint",
     "eslintplugin",
     "esnext",
     "modules",
-    "eslint-plugin-import"
+    "eslint-plugin-absolute-import"
   ],
-  "author": "Ben Mosher (me@benmosher.com)",
+  "author": "Ben Mosher (me@mcclowes.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/benmosher/eslint-plugin-import/issues"
+    "url": "https://github.com/mcclowes/eslint-plugin-absolute-import/issues"
   },
-  "homepage": "https://github.com/benmosher/eslint-plugin-import",
+  "homepage": "https://github.com/mcclowes/eslint-plugin-absolute-import",
   "dependencies": {
     "debug": "^2.6.9",
     "resolve": "^1.5.0"

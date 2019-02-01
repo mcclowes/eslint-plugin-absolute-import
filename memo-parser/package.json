@@ -11,19 +11,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/benmosher/eslint-plugin-import.git"
+    "url": "git+https://github.com/mcclowes/eslint-plugin-absolute-import.git"
   },
   "keywords": [
     "eslint",
-    "eslint-plugin-import",
+    "eslint-plugin-absolute-import",
     "parser"
   ],
-  "author": "Ben Mosher (me@benmosher.com)",
+  "author": "Ben Mosher (me@mcclowes.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/benmosher/eslint-plugin-import/issues"
+    "url": "https://github.com/mcclowes/eslint-plugin-absolute-import/issues"
   },
-  "homepage": "https://github.com/benmosher/eslint-plugin-import#readme",
+  "homepage": "https://github.com/mcclowes/eslint-plugin-absolute-import#readme",
   "peerDependencies": {
     "eslint": ">=3.5.0"
   }

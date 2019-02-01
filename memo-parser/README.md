@@ -1,4 +1,4 @@
-# eslint-plugin-import/memo-parser
+# eslint-plugin-absolute-import/memo-parser
 
 
 ## NOTE!
@@ -13,7 +13,7 @@ This parser is just a memoizing wrapper around some actual parser.
 To configure, just add your _actual_ parser to the `parserOptions`, like so:
 
 ```yaml
-parser: eslint-plugin-import/memo-parser
+parser: eslint-plugin-absolute-import/memo-parser
 # parser: babel-eslint
 
 parserOptions:

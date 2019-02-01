@@ -1,7 +1,7 @@
 {
   "name": "eslint-module-utils",
   "version": "2.2.0",
-  "description": "Core utilities to support eslint-plugin-import and other module-related plugins.",
+  "description": "Core utilities to support eslint-plugin-absolute-import and other module-related plugins.",
   "engines": {
     "node": ">=4"
   },
@@ -10,20 +10,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/benmosher/eslint-plugin-import.git"
+    "url": "git+https://github.com/mcclowes/eslint-plugin-absolute-import.git"
   },
   "keywords": [
-    "eslint-plugin-import",
+    "eslint-plugin-absolute-import",
     "eslint",
     "modules",
     "esmodules"
   ],
-  "author": "Ben Mosher <me@benmosher.com>",
+  "author": "Ben Mosher <me@mcclowes.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/benmosher/eslint-plugin-import/issues"
+    "url": "https://github.com/mcclowes/eslint-plugin-absolute-import/issues"
   },
-  "homepage": "https://github.com/benmosher/eslint-plugin-import#readme",
+  "homepage": "https://github.com/mcclowes/eslint-plugin-absolute-import#readme",
   "dependencies": {
     "debug": "^2.6.8",
     "pkg-dir": "^2.0.0"

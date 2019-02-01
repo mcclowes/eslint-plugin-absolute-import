@@ -10,7 +10,7 @@ var findRoot = require('find-root')
   , semver = require('semver')
   , has = require('has')
 
-var log = require('debug')('eslint-plugin-import:resolver:webpack')
+var log = require('debug')('eslint-plugin-absolute-import:resolver:webpack')
 
 exports.interfaceVersion = 2
 

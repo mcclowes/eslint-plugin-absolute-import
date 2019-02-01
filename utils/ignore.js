@@ -3,7 +3,7 @@ exports.__esModule = true
 
 const extname = require('path').extname
 
-const log = require('debug')('eslint-plugin-import:utils:ignore')
+const log = require('debug')('eslint-plugin-absolute-import:utils:ignore')
 
 // one-shot memoized
 let cachedSet, lastSettings

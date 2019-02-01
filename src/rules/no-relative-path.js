@@ -1,5 +1,6 @@
 import moduleVisitor, { makeOptionsSchema } from 'eslint-module-utils/moduleVisitor'
 import { isAbsolute } from '../core/importType'
+
 import docsUrl from '../docsUrl'
 
 module.exports = {
@@ -18,6 +19,7 @@ module.exports = {
     }
 
     const options = Object.assign({ esmodule: true, commonjs: true }, context.options[0])
+
     return moduleVisitor(reportIfNotAbsolute, options)
   },
 }

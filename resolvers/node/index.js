@@ -1,7 +1,7 @@
 var resolve = require('resolve')
   , path = require('path')
 
-var log = require('debug')('eslint-plugin-import:resolver:node')
+var log = require('debug')('eslint-plugin-absolute-import:resolver:node')
 
 exports.interfaceVersion = 2
 

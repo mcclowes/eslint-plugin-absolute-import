@@ -25,7 +25,7 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 
 ## v0.2.3 - 2016-08-20
 ### Added
-- debug logging (use `DEBUG=eslint-plugin-import:resolver:node eslint [...]`)
+- debug logging (use `DEBUG=eslint-plugin-absolute-import:resolver:node eslint [...]`)
 
 ## v0.2.2 - 2016-07-14
 ### Fixed
@@ -40,11 +40,11 @@ This change log adheres to standards from [Keep a CHANGELOG](http://keepachangel
 ### Fixed
 - find files with `.json` extensions (#333, thanks for noticing @jfmengels)
 
-[#438]: https://github.com/benmosher/eslint-plugin-import/pull/438
+[#438]: https://github.com/mcclowes/eslint-plugin-absolute-import/pull/438
 
-[#939]: https://github.com/benmosher/eslint-plugin-import/issues/939
-[#531]: https://github.com/benmosher/eslint-plugin-import/issues/531
-[#437]: https://github.com/benmosher/eslint-plugin-import/issues/437
+[#939]: https://github.com/mcclowes/eslint-plugin-absolute-import/issues/939
+[#531]: https://github.com/mcclowes/eslint-plugin-absolute-import/issues/531
+[#437]: https://github.com/mcclowes/eslint-plugin-absolute-import/issues/437
 
 [@jasonkarns]: https://github.com/jasonkarns
 [@lukeapage]: https://github.com/lukeapage

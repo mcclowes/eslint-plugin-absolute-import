@@ -11,7 +11,7 @@ import isIgnored, { hasValidExtension } from 'eslint-module-utils/ignore'
 import { hashObject } from 'eslint-module-utils/hash'
 import * as unambiguous from 'eslint-module-utils/unambiguous'
 
-const log = debug('eslint-plugin-import:ExportMap')
+const log = debug('eslint-plugin-absolute-import:ExportMap')
 
 const exportCache = new Map()
 

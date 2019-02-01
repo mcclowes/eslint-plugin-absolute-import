@@ -202,10 +202,6 @@ function resolve(p, context) {
       context.settings
     )
 
-    // if(resolvedPath===undefined){
-    //   console.log('error', p, context)
-    // }
-
     if(resolvedPath===undefined){
       resolvedPath = absolute(
         context.parserPath,

@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-absolute-import",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Use absolute imports.",
   "engines": {
     "node": ">=4"

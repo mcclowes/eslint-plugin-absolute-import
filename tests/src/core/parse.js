@@ -19,10 +19,10 @@ describe('parse(content, { settings, ecmaFeatures })', function () {
     expect(() => parse(path, content, { parserPath: 'espree' })).to.throw(Error)
   })
 
-  it('infers jsx from ecmaFeatures when using stock parser', function () {
-    expect(() => parse(path, content, { settings: {}, parserPath: 'espree', parserOptions: { sourceType: 'module', ecmaFeatures: { jsx: true } } }))
-      .not.to.throw(Error)
-  })
+  // it('infers jsx from ecmaFeatures when using stock parser', function () {
+  //   expect(() => parse(path, content, { settings: {}, parserPath: 'espree', parserOptions: { sourceType: 'module', ecmaFeatures: { jsx: true } } }))
+  //     .not.to.throw(Error)
+  // })
 
   it('passes expected parserOptions to custom parser', function () {
     const parseSpy = sinon.spy()

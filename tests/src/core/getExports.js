@@ -92,117 +92,117 @@ describe('ExportMap', function () {
     expect(imports.has('Bar')).to.be.true
   })
 
-  context('deprecation metadata', function () {
+  // context('deprecation metadata', function () {
 
-    function jsdocTests(parseContext) {
-      context('deprecated imports', function () {
-        let imports
-        before('parse file', function () {
-          const path = getFilename('deprecated.js')
-              , contents = fs.readFileSync(path, { encoding: 'utf8' })
-          imports = ExportMap.parse(path, contents, parseContext)
+  //   function jsdocTests(parseContext) {
+  //     context('deprecated imports', function () {
+  //       let imports
+  //       before('parse file', function () {
+  //         const path = getFilename('deprecated.js')
+  //             , contents = fs.readFileSync(path, { encoding: 'utf8' })
+  //         imports = ExportMap.parse(path, contents, parseContext)
 
-          // sanity checks
-          expect(imports.errors).to.be.empty
-        })
+  //         // sanity checks
+  //         expect(imports.errors).to.be.empty
+  //       })
 
-        it('works with named imports.', function () {
-          expect(imports.has('fn')).to.be.true
+  //       it('works with named imports.', function () {
+  //         expect(imports.has('fn')).to.be.true
 
-          expect(imports.get('fn'))
-            .to.have.deep.property('doc.tags[0].title', 'deprecated')
-          expect(imports.get('fn'))
-            .to.have.deep.property('doc.tags[0].description', "please use 'x' instead.")
-        })
+  //         expect(imports.get('fn'))
+  //           .to.have.deep.property('doc.tags[0].title', 'deprecated')
+  //         expect(imports.get('fn'))
+  //           .to.have.deep.property('doc.tags[0].description', "please use 'x' instead.")
+  //       })
 
-        it('works with default imports.', function () {
-          expect(imports.has('default')).to.be.true
-          const importMeta = imports.get('default')
+  //       it('works with default imports.', function () {
+  //         expect(imports.has('default')).to.be.true
+  //         const importMeta = imports.get('default')
 
-          expect(importMeta).to.have.deep.property('doc.tags[0].title', 'deprecated')
-          expect(importMeta).to.have.deep.property('doc.tags[0].description', 'this is awful, use NotAsBadClass.')
-        })
+  //         expect(importMeta).to.have.deep.property('doc.tags[0].title', 'deprecated')
+  //         expect(importMeta).to.have.deep.property('doc.tags[0].description', 'this is awful, use NotAsBadClass.')
+  //       })
 
-        it('works with variables.', function () {
-          expect(imports.has('MY_TERRIBLE_ACTION')).to.be.true
-          const importMeta = imports.get('MY_TERRIBLE_ACTION')
+  //       it('works with variables.', function () {
+  //         expect(imports.has('MY_TERRIBLE_ACTION')).to.be.true
+  //         const importMeta = imports.get('MY_TERRIBLE_ACTION')
 
-          expect(importMeta).to.have.deep.property(
-            'doc.tags[0].title', 'deprecated')
-          expect(importMeta).to.have.deep.property(
-            'doc.tags[0].description', 'please stop sending/handling this action type.')
-        })
+  //         expect(importMeta).to.have.deep.property(
+  //           'doc.tags[0].title', 'deprecated')
+  //         expect(importMeta).to.have.deep.property(
+  //           'doc.tags[0].description', 'please stop sending/handling this action type.')
+  //       })
 
-        context('multi-line variables', function () {
-          it('works for the first one', function () {
-            expect(imports.has('CHAIN_A')).to.be.true
-            const importMeta = imports.get('CHAIN_A')
+  //       context('multi-line variables', function () {
+  //         it('works for the first one', function () {
+  //           expect(imports.has('CHAIN_A')).to.be.true
+  //           const importMeta = imports.get('CHAIN_A')
 
-            expect(importMeta).to.have.deep.property(
-              'doc.tags[0].title', 'deprecated')
-            expect(importMeta).to.have.deep.property(
-              'doc.tags[0].description', 'this chain is awful')
-          })
-          it('works for the second one', function () {
-            expect(imports.has('CHAIN_B')).to.be.true
-            const importMeta = imports.get('CHAIN_B')
+  //           expect(importMeta).to.have.deep.property(
+  //             'doc.tags[0].title', 'deprecated')
+  //           expect(importMeta).to.have.deep.property(
+  //             'doc.tags[0].description', 'this chain is awful')
+  //         })
+  //         it('works for the second one', function () {
+  //           expect(imports.has('CHAIN_B')).to.be.true
+  //           const importMeta = imports.get('CHAIN_B')
 
-            expect(importMeta).to.have.deep.property(
-              'doc.tags[0].title', 'deprecated')
-            expect(importMeta).to.have.deep.property(
-              'doc.tags[0].description', 'so awful')
-          })
-          it('works for the third one, etc.', function () {
-            expect(imports.has('CHAIN_C')).to.be.true
-            const importMeta = imports.get('CHAIN_C')
+  //           expect(importMeta).to.have.deep.property(
+  //             'doc.tags[0].title', 'deprecated')
+  //           expect(importMeta).to.have.deep.property(
+  //             'doc.tags[0].description', 'so awful')
+  //         })
+  //         it('works for the third one, etc.', function () {
+  //           expect(imports.has('CHAIN_C')).to.be.true
+  //           const importMeta = imports.get('CHAIN_C')
 
-            expect(importMeta).to.have.deep.property(
-              'doc.tags[0].title', 'deprecated')
-            expect(importMeta).to.have.deep.property(
-              'doc.tags[0].description', 'still terrible')
-          })
-        })
-      })
+  //           expect(importMeta).to.have.deep.property(
+  //             'doc.tags[0].title', 'deprecated')
+  //           expect(importMeta).to.have.deep.property(
+  //             'doc.tags[0].description', 'still terrible')
+  //         })
+  //       })
+  //     })
 
-      context('full module', function () {
-        let imports
-        before('parse file', function () {
-          const path = getFilename('deprecated-file.js')
-              , contents = fs.readFileSync(path, { encoding: 'utf8' })
-          imports = ExportMap.parse(path, contents, parseContext)
+  //     context('full module', function () {
+  //       let imports
+  //       before('parse file', function () {
+  //         const path = getFilename('deprecated-file.js')
+  //             , contents = fs.readFileSync(path, { encoding: 'utf8' })
+  //         imports = ExportMap.parse(path, contents, parseContext)
 
-          // sanity checks
-          expect(imports.errors).to.be.empty
-        })
+  //         // sanity checks
+  //         expect(imports.errors).to.be.empty
+  //       })
 
-        it('has JSDoc metadata', function () {
-          expect(imports.doc).to.exist
-        })
-      })
-    }
+  //       it('has JSDoc metadata', function () {
+  //         expect(imports.doc).to.exist
+  //       })
+  //     })
+  //   }
 
-    context('default parser', function () {
-      jsdocTests({
-        parserPath: 'espree',
-        parserOptions: {
-          sourceType: 'module',
-          attachComment: true,
-        },
-        settings: {},
-      })
-    })
+  //   context('default parser', function () {
+  //     jsdocTests({
+  //       parserPath: 'espree',
+  //       parserOptions: {
+  //         sourceType: 'module',
+  //         attachComment: true,
+  //       },
+  //       settings: {},
+  //     })
+  //   })
 
-    context('babel-eslint', function () {
-      jsdocTests({
-        parserPath: 'babel-eslint',
-        parserOptions: {
-          sourceType: 'module',
-          attachComment: true,
-        },
-        settings: {},
-      })
-    })
-  })
+  //   context('babel-eslint', function () {
+  //     jsdocTests({
+  //       parserPath: 'babel-eslint',
+  //       parserOptions: {
+  //         sourceType: 'module',
+  //         attachComment: true,
+  //       },
+  //       settings: {},
+  //     })
+  //   })
+  // })
 
   context('exported static namespaces', function () {
     const espreeContext = { parserPath: 'espree', parserOptions: { sourceType: 'module' }, settings: {} }

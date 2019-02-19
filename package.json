@@ -64,7 +64,7 @@
     "nyc": "^11.7.1",
     "redux": "^3.0.4",
     "rimraf": "^2.6.2",
-    "sinon": "^2.3.2",
+    "sinon": "^7.2.4",
     "typescript": "~2.8.1",
     "typescript-eslint-parser": "^15.0.0"
   },
